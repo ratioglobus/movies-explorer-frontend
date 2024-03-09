@@ -1,0 +1,20 @@
+.promo {
+  margin: 0;
+  padding: 184px 0px 224px;
+  background-color: #dddee3;
+  background-image: url(../../images/pic__COLOR_landing-logo.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 82px;
+}
+
+.promo__title {
+  margin: 0 auto;
+  padding: 0;
+  width: 730px;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+.navTab {
+  margin: 0;
+  padding: 24px 0px;
+  background-color: #F5F5F5;
+}
+
+.navTab__links {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  max-width: 276px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navTab__links-element {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.navTab__link {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.navTab__link::after {
+  margin: 0;
+  padding: 0;
+  content: ' ';
+  background: black;
+  width: 107%;
+  height: 1px;
+  top: 17px;
+  left: -2px;
+  position: absolute;
+}
