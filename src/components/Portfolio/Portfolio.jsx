@@ -7,7 +7,7 @@ export default function Portfolio () {
       <ul className='portfolio__list'>
         <li className='portfolio__list-el'>
           <a
-            href='https://ratioglobus.github.io/how-to-learn/'
+            href='https://ratioglobus.github.io/learn-to-study/'
             target='_blank'
             rel='noopener noreferrer'
             className='portfolio__link links-hover-state'

@@ -11,14 +11,16 @@ export default function Footer () {
           <li className='footer__list-element'>
             <a
               href='https://practicum.yandex.ru/'
-              className='footer__link links-hover-state'>
+              className='footer__link links-hover-state'
+              target='_blank'>
               Яндекс.Практикум
             </a>
           </li>
           <li className='footer__list-element'>
             <a
               href='https://github.com/ratioglobus'
-              className='footer__link links-hover-state'>
+              className='footer__link links-hover-state'
+              target='_blank'>
               Github
             </a>
           </li>
