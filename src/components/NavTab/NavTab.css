@@ -40,3 +40,13 @@
   left: -2px;
   position: absolute;
 }
+
+@media (max-width: 609px) {
+  .navTab__links {
+    max-width: 215px;
+  }
+
+  .navTab__link {
+    font-size: 11px;
+  }
+}

@@ -72,3 +72,115 @@
 .aboutProject__time-weeks:nth-of-type(2) {
   background-color: #f2f2f2;
 }
+
+@media (max-width: 1278px) {
+  .aboutProject__text {
+    grid-row-gap: 22px;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}
+
+@media (max-width: 1079px) {
+  .aboutProject__text {
+    grid-row-gap: 22px;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+}
+
+@media (max-width: 839px) {
+  .aboutProject {
+    padding: 90px 50px;
+  }
+
+  .aboutProject__text-info {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .aboutProject__text {
+    grid-template-columns: repeat(auto-fit, minmax(319px, 1fr));
+    grid-row-gap: 22px;
+    grid-column-gap: 30px;
+  }
+
+  .aboutProject__time {
+    grid-template-columns: 21% 79%;
+    grid-row-gap: 14px;
+  }
+
+  .aboutProject__time-weeks {
+    margin: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .aboutProject__textBox {
+    grid-row-gap: 22px;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 730px) {
+  .aboutProject__textBox {
+    grid-template-areas:
+      'title-first'
+      'text-first'
+      'title-second'
+      'text-second';
+    gap: 18px;
+  }
+
+  .grid-title-first {
+    grid-area: title-first;
+  }
+
+  .grid-title-second {
+    grid-area: title-second;
+  }
+
+  .grid-text-first {
+    margin-bottom: 40px;
+    grid-area: text-first;
+  }
+
+  .grid-text-second {
+    grid-area: text-second;
+  }
+}
+
+@media (max-width: 609px) {
+  .aboutProject {
+    padding: 70px 18px;
+  }
+
+  .aboutProject__text-title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .aboutProject__text-info {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutProject__textBox {
+    margin: 89px auto 60px;
+  }
+
+  .aboutProject__timeBox {
+    grid-row-gap: 10px;
+    grid-template-columns: 36% 64%;
+  }
+
+  .aboutProject__time-weeks {
+    font-size: 11px;
+  }
+
+  .aboutProject__time-info {
+    line-height: normal;
+    font-size: 11px;
+  }
+}

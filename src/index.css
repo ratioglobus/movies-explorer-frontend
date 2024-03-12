@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.page {
+  background-color: #fafafa;
+}
+
 .buttons-hover-state:hover {
   cursor: pointer;
   opacity: 0.8;
@@ -14,3 +18,5 @@ html {
   cursor: pointer;
   opacity: 0.7;
 }
+
+ul li { list-style-type: none; }

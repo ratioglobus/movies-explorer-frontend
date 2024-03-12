@@ -1,0 +1,86 @@
+.register {
+  margin: 0 auto;
+  padding: 70px 0;
+  min-height: 100dvh;
+  width: 396px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.register__logo {
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../images/logo.svg);
+}
+
+.register__header {
+  margin: 40px 0 35px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.register__info {
+  margin: 0;
+  padding: 16px 0 0 0;
+  text-align: center;
+}
+
+.register__info-text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+
+.register__info-link {
+  padding: 0;
+  margin: 0 0 0 5px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  color: #3456f3;
+}
+
+@media (max-width: 839px) {
+  .register {
+    padding: 232px 0 288px;
+  }
+}
+
+@media (max-width: 609px) {
+  .register {
+    padding: 56px 0 30px;
+    width: 260px;
+    align-items: center;
+  }
+
+  .register__header {
+    margin: 49px 0 76px;
+  }
+
+  .register__info {
+    padding: 11px 0 0 0;
+  }
+
+  .register__info-text {
+    font-size: 12px;
+  }
+
+  .register__info-link {
+    font-size: 12px;
+    margin: 0 0 0 6px;
+  }
+}
