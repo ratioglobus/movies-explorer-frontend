@@ -21,12 +21,16 @@ export default function MoviesCardList ({ moviesSavedPage }) {
         }`}
       >
         {testArrCards.length ? (
-          <>
-          {testArrCards.map(item => (
-            <li key={item.id}> {}
-              <MoviesCard item={item} moviesSavedPage={moviesSavedPage}/>
-            </li>
-          ))}
+           <>
+           {testArrCards.map(item => (
+             <li>
+               <MoviesCard
+                 item={item}
+                 key={item.id}
+                 moviesSavedPage={moviesSavedPage}
+               />
+             </li>
+           ))}
           </>
         ) : ( <p className='cardList__error'>Фильмов не найдено</p>
         )}
