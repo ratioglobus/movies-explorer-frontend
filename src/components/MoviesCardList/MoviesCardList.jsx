@@ -1,6 +1,6 @@
 import './MoviesCardList.css'
 import MoviesCard from '../MoviesCard/MoviesCard.jsx'
-import { testCardsList } from '../../constants/testCardsList.js'
+import { testFilms } from '../../vendor/testFilms.js'
 import { useAdjustSize } from '../../utils/useAdjustSize'
 
 
@@ -13,16 +13,16 @@ export default function MoviesCardList ({ moviesSavedPage }) {
       
       <ul
         className={`cardList__items ${
-          (testCardsList.length === 3 && testCardsList.length && isScreen989) ||
-          (testCardsList.length === 2 && testCardsList.length && isScreen839) ||
-          (testCardsList.length === 1 && testCardsList.length)
+          (testFilms.length === 3 && testFilms.length && isScreen989) ||
+          (testFilms.length === 2 && testFilms.length && isScreen839) ||
+          (testFilms.length === 1 && testFilms.length)
             ? 'cardList__items_left'
             : ''
         }`}
       >
-        {testCardsList.length ? (
+        {testFilms.length ? (
           <>
-          {testCardsList.map(item => (
+          {testFilms.map(item => (
             <li key={item.id}> {}
               <MoviesCard item={item} moviesSavedPage={moviesSavedPage}/>
             </li>

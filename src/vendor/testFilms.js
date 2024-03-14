@@ -1,4 +1,4 @@
-const testCardsList = [ 
+const testFilms = [ 
   {
     id: 1,
     key: 1,
@@ -181,4 +181,4 @@ const testCardsList = [
   },
 ]
 
-export { testCardsList }
+export { testFilms }
