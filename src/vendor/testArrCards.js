@@ -1,4 +1,4 @@
-const testFilms = [ 
+const testArrCards = [ 
   {
     id: 1,
     key: 1,
@@ -181,4 +181,4 @@ const testFilms = [
   },
 ]
 
-export { testFilms }
+export { testArrCards }
