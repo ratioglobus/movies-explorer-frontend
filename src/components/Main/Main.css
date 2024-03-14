@@ -26,3 +26,10 @@
   left: 0px;
   position: absolute;
 }
+
+@media (max-width: 609px) {
+  .main__subtitle {
+    letter-spacing: -0.72px;
+    font-size: 18px;
+  }
+}

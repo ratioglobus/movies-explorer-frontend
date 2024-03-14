@@ -26,8 +26,8 @@ export default function SearchForm () {
         <div className='searchForm__box'>
           <input
             type='text'
-            id=''
-            name=''
+            id='searchForm__box'
+            name='searchForm__box'
             className='searchForm__input'
             placeholder='Фильм'
             autoComplete='off'
@@ -41,10 +41,11 @@ export default function SearchForm () {
             className='searchForm__button buttons-hover-state'
           />
         </div>
-        <label className='searchForm__filter'>
+        
+        <div className='searchForm__filter'>
           <Checkbox />
           <span className='searchForm__filter-text'>Короткометражки</span>
-        </label>
+        </div>
       </form>
     </section>
   )

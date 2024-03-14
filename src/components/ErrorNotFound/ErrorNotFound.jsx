@@ -7,13 +7,14 @@ export default function ErrorNotFound () {
   
   return (
     <section className='notFound'>
-      <h3 className='notFound__title'>404</h3>
-
+      <h1 className='notFound__title'>404</h1>
       <p className='notFound__text'>Страница не найдена</p>
       <button
         type='button'
-        className='notFound__button buttons-hover-state'
-        onClick={() => { navigate(-1) }}
+        className='notFound__button buttons-hover-style'
+        onClick={() => {
+          navigate(-1)
+        }}
       >
         Назад
       </button>

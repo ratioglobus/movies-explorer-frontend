@@ -1,5 +1,5 @@
 .aboutProject {
-  padding: 110px 70px;
+  padding: 105px 70px;
 }
 
 .aboutProject__text {
@@ -16,8 +16,8 @@
   padding: 0;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  font-weight: 400;
   letter-spacing: -0.8px;
 }
 
@@ -116,7 +116,7 @@
 }
 
 @media (max-width: 769px) {
-  .aboutProject__textBox {
+  .aboutProject__text {
     grid-row-gap: 22px;
     grid-column-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -124,7 +124,7 @@
 }
 
 @media (max-width: 730px) {
-  .aboutProject__textBox {
+  .aboutProject__text {
     grid-template-areas:
       'title-first'
       'text-first'
@@ -166,11 +166,11 @@
     line-height: 16px;
   }
 
-  .aboutProject__textBox {
+  .aboutProject__text {
     margin: 89px auto 60px;
   }
 
-  .aboutProject__timeBox {
+  .aboutProject__time {
     grid-row-gap: 10px;
     grid-template-columns: 36% 64%;
   }

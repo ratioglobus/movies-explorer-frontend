@@ -6,8 +6,8 @@
 .authInput__text { 
   font-size: 10px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
+  font-weight: 400;
   color: #a0a0a0;
 }
 
@@ -19,21 +19,27 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  border: none;
   outline-width: 1px;
-  background-color: transparent;
-  outline-color: #3456f3;
+  border: none;
+  outline: none;
   color: #000;
+  background-color: transparent;
+  border-bottom: 1px solid #e8e8e8;
 }
 
-.authInput::after {
+.authInput__input:focus {
+  border-bottom: 1px solid #3456f3;
+}
+
+.authInput__error {
   margin: 0;
   padding: 0;
-  content: ' ';
-  width: 100%;
-  height: 1px;
-  top: 49px;
+  top: 50px;
   left: 0px;
+  color: #ee3465;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   position: absolute;
-  background: #e8e8e8;
 }

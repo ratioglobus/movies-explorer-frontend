@@ -16,7 +16,9 @@
 .navTab__links-element {
   margin: 0;
   padding: 0;
-  position: relative;
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 1px;
 }
 
 .navTab__link {
@@ -29,7 +31,7 @@
   line-height: 16px;
 }
 
-.navTab__link::after {
+/* .navTab__link::after {
   margin: 0;
   padding: 0;
   content: ' ';
@@ -39,7 +41,7 @@
   top: 17px;
   left: -2px;
   position: absolute;
-}
+} */
 
 @media (max-width: 609px) {
   .navTab__links {

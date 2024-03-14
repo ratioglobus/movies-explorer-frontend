@@ -1,6 +1,7 @@
 import './AuthInput.css'
 
 export default function AuthInput ({ typeInput, idInput, labelText, ...props }) {
+  
   return (
     <div className='authInput'>
       <label className='authInput__text' htmlFor={idInput}>{labelText}</label>

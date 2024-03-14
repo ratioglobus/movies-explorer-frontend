@@ -12,6 +12,7 @@ export default function Footer () {
             <a
               href='https://practicum.yandex.ru/'
               className='footer__link links-hover-state'
+              rel='noopener noreferrer'
               target='_blank'>
               Яндекс.Практикум
             </a>
@@ -20,6 +21,7 @@ export default function Footer () {
             <a
               href='https://github.com/ratioglobus'
               className='footer__link links-hover-state'
+              rel='noopener noreferrer'
               target='_blank'>
               Github
             </a>

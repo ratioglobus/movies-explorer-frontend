@@ -18,7 +18,7 @@ export default function AboutMe () {
             Недавно начал кодить. С 2015 года работал в компании Nerv. После того, как прошёл курс по веб-разработке, начал
             заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
-          <a href='https://github.com/ratioglobus' className='aboutMe__link links-hover-state' rel='noopener noreferrer'>Github </a>
+          <a href='https://github.com/ratioglobus' className='aboutMe__link links-hover-state' target='_blank' rel='noopener noreferrer'>Github </a>
         </div>
       </div>
     </section>

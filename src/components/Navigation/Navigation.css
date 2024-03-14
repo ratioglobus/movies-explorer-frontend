@@ -1,18 +1,18 @@
 .navigate {
+  margin: 0;
+  padding: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  opacity: 0;
+  justify-content: flex-end;
   visibility: hidden;
   transition: 0.3s ease;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-  z-index: 100;
+  opacity: 0;
 }
 
 .navigate:hover {
@@ -20,22 +20,22 @@
 }
 
 .navigate_opened {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
 .navigate__container {
   padding: 160px 90px 90px;
-  box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   min-width: 520px;
   height: 100%;
   background: #ffffff;
   color: #000000;
   position: relative;
+  box-sizing: border-box;
 }
 
 .navigate__container:hover {
@@ -45,28 +45,28 @@
 .navigate__links {
   margin: 0;
   padding: 0;
-  list-style: none;
   text-align: center;
+  list-style: none;
 }
 
 .navigate__links-el {
-  margin: 0 0 29px 0;
   padding: 0;
+  margin: 0 0 29px 0;
   text-decoration: none;
 }
 
 .navigate__buttonClose {
+  padding: 0;
   width: 32px;
   height: 32px;
   background-image: url(../../images/icon-close.svg);
-  background-color: transparent;
   background-repeat: no-repeat;
+  background-color: transparent;
   background-size: cover;
-  border: none;
   position: absolute;
+  border: none;
   top: 22px;
   right: 22px;
-  padding: 0;
 }
 
 .navigate__buttonClose:hover {
@@ -79,16 +79,18 @@
   padding: 0;
   margin: 0;
   color: #000;
-  text-decoration: none;
-  font-feature-settings: 'clig' off, 'liga' off;
   font-size: 18px;
-  font-style: normal;
   font-weight: 500;
+  font-style: normal;
   line-height: normal;
   position: relative;
+  text-decoration: none;
+  font-feature-settings: 'clig' off, 'liga' off;
 }
 
 .navigate__link-active::after {
+  margin: 0;
+  padding: 0;
   content: ' ';
   background: black;
   width: 100%;
@@ -96,34 +98,32 @@
   left: 0px;
   top: 26px;
   position: absolute;
-  margin: 0;
-  padding: 0;
 }
 
 .navigate__buttonProfile {
+  margin: 0;
+  padding: 6px 11px;
   color: #000;
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  border-radius: 50px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin: 0;
-  padding: 6px 11px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
 }
 
 .navigate__buttonProfile-img {
-  margin: 0 7px 0 0;
   padding: 0;
+  margin: 0 7px 0 0;
   width: 12px;
   height: 14px;
-  background-image: url(../../images/icon-burger.svg);
-  background-repeat: no-repeat;
+  background-image: url(../../images/profile.svg);
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 609px) {
