@@ -3,11 +3,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .page {
   background-color: #fafafa;
   font-family: 'Inter', 'Arial', sans-serif;
+  overflow-x: hidden;
 }
 
 .buttons-hover-state:hover {

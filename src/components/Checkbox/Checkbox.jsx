@@ -5,9 +5,7 @@ import './Checkbox.css'
 
 export default function Checkbox () {
   const [checked, setChecked] = React.useState(false)
-  const handleChange = nextChecked => {
-    setChecked(nextChecked)
-  }
+  const handleChange = nextChecked => { setChecked(nextChecked) }
 
   return (
     <Switch
@@ -17,6 +15,7 @@ export default function Checkbox () {
       handleDiameter={10}
       width={36}
       height={16}
+      aria-checked={undefined}
       onColor='#2BE080'
       offColor='#C4C4C4'
       onHandleColor='#fff'

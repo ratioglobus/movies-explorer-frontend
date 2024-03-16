@@ -1,12 +1,11 @@
 import React from 'react'
 import './Header.css'
-import Navigation from '../Navigation/Navigation'
 import { Link, useLocation } from 'react-router-dom'
 import { useAdjustSize } from '../../utils/useAdjustSize'
 
 
 export default function Header ({ isLogged, mainPage }) {
-  const [isOpened, setIsOpened] = React.useState(false)
+  const [isOpened, setIsOpened] = React.useState(true)
   const { isScreen839 } = useAdjustSize()
   const location = useLocation()
 
@@ -90,7 +89,6 @@ export default function Header ({ isLogged, mainPage }) {
           )}
         </div>
       </header>
-      <Navigation isOpened={isOpened} onClose={closeBurgerMenu} />
     </>
   )
 }

@@ -4,7 +4,7 @@
 }
 
 input[type='text']::placeholder {   
-  text-indent: 37px;
+  text-indent: 45px;
   color: #A0A0A0;
 }
 
@@ -96,6 +96,15 @@ input[type='text']::placeholder {
 @media (max-width: 609px) {
   .searchForm {
     padding: 80px 10px 79px;
+  }
+
+  input[type='text']::placeholder {   
+    font-size: 14px;
+    text-indent: 1px;
+  }
+
+  .searchForm__input::placeholder {
+    background: none;
   }
 
   .searchForm__form {

@@ -23,6 +23,7 @@ export default function AuthForm ({
       name={idForm}
       className={`${classForm} authForm`}
       onSubmit={handleSubmit}
+      placeholder='Форма авторизации'
     >
       {children}
       
@@ -33,11 +34,10 @@ export default function AuthForm ({
           className={`authForm__btn ${
             isValid ? 'buttons-hover-state' : 'authForm__btn-disabled'
           }`}
+          disabled={!isValid}
           type='submit'
           form={idForm}
-          disabled={!isValid}
         >
-
         {buttonText}
         </button>
       </div>

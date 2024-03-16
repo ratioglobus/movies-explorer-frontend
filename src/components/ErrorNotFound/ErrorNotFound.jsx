@@ -11,7 +11,7 @@ export default function ErrorNotFound () {
       <p className='notFound__text'>Страница не найдена</p>
       <button
         type='button'
-        className='notFound__button buttons-hover-style'
+        className='notFound__button buttons-hover-state'
         onClick={() => {
           navigate(-1)
         }}

@@ -10,11 +10,22 @@ import Portfolio from '../Portfolio/Portfolio'
 import Techs from '../Techs/Techs'
 import Footer from '../Footer/Footer'
 import Preloader from '../Preloader/Preloader'
+import Navigation from '../Navigation/Navigation'
 
 export default function Main () {
 
   const { currentUser, isLoading, isLogged } =
   React.useContext(CurrentUserContext)
+
+  const [isOpened, setIsOpened] = React.useState(false)
+
+  function closeBurgerMenu () {
+    setIsOpened(false)
+  }
+
+  function openBurgerMenu () {
+    setIsOpened(true)
+  }
 
   return (
     <>
@@ -31,6 +42,7 @@ export default function Main () {
 
       <Footer />
       {isLoading && <Preloader />}
+      <Navigation isOpened={isOpened} onClose={closeBurgerMenu} />
     </>
   )
 }

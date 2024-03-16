@@ -1,6 +1,6 @@
 .aboutMe {
   margin: 0;
-  padding: 105px 70px 50px;
+  padding: 110px 70px 50px;
 }
 
 .aboutMe__photo {
@@ -97,7 +97,7 @@
 
 @media (max-width: 609px) {
   .aboutMe {
-    padding: 67px 14px 50px;
+    padding: 69px 14px 50px;
   }
 
   .aboutMe__cards {
