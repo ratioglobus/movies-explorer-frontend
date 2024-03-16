@@ -58,7 +58,6 @@ export default function Profile () {
             method='POST'
             name='profileForm'
             onSubmit={handleSubmit}
-            placeholder='Форма профиля'
           >
             <label className='profile__box'>
               <span className='profile__input-text'>Имя</span>

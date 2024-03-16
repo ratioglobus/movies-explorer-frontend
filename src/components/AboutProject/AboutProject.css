@@ -192,5 +192,6 @@
 @media (max-width: 430px) {
   .aboutProject__text {
     margin: 89px auto 58px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }

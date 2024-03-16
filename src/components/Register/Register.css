@@ -62,7 +62,7 @@
 
 @media (max-width: 609px) {
   .register {
-    padding: 56px 0 30px;
+    padding: 56px 0 0;
     width: 260px;
     align-items: center;
   }
@@ -73,7 +73,7 @@
 
   .register__info {
     padding: 11px 0 41px 0;
-    margin: 0 0 16px 0;
+    margin: 0;
   }
 
   .register__info-text {

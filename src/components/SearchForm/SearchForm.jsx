@@ -22,7 +22,6 @@ export default function SearchForm () {
         name='searchForm'
         method='POST'
         onSubmit={handleSubmit}
-        placeholder='Фильм'
       >
         <div className='searchForm__box'>
           <input

@@ -9,7 +9,7 @@ export default function AboutMe () {
       <div className='aboutMe__cards'>
         <img src='https://aigis.club/uploads/posts/2022-05/1653296256_29-adonius-club-p-sindzi-na-stule-oboi-krasivo-48.png' alt='Изображение студента' className='aboutMe__photo' />
         <div className='aboutMe__texts'>
-          <h3 className='aboutMe__name'>Синдзи Икари</h3>
+          <h3 className='aboutMe__name'>Виталий</h3>
           <p className='aboutMe__myRole'>Фронтенд-разработчик, 22 года</p>
           <p className='aboutMe__info'>
             Я живу в Токио-3, учился управлению Евангелионами. 

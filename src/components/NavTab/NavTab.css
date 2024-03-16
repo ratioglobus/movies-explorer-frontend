@@ -43,6 +43,10 @@
 } */
 
 @media (max-width: 609px) {
+  .navTab {
+    padding: 22px 0px;
+  }
+
   .navTab__links {
     max-width: 215px;
   }

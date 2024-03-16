@@ -23,7 +23,6 @@ export default function AuthForm ({
       name={idForm}
       className={`${classForm} authForm`}
       onSubmit={handleSubmit}
-      placeholder='Форма авторизации'
     >
       {children}
       

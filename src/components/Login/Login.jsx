@@ -49,6 +49,9 @@ export default function Login () {
           typeInput='password'
           labelText='Пароль'
         />
+        <AuthInput
+          className='authInput__input-palceholder'
+        />
       </AuthForm>
       <div className='login__info'>
         <span className='login__info-text'>Ещё не зарегистрированы?</span>

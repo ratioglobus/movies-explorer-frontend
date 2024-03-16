@@ -13,7 +13,7 @@ import Register from '../Register/Register.jsx'
 
 
 export default function App () {
-  const [currentUser, setCurrentUser] = React.useState({ name: 'Синдзи Икари', email: 'sindziik@gmail.com' })
+  const [currentUser, setCurrentUser] = React.useState({ name: 'Виталий', email: 'sindziik@gmail.com' })
   const [isLogged, setIsLogged] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(false)
 
