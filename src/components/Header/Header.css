@@ -1,0 +1,141 @@
+.header {
+  margin: 0;
+  padding: 10px 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_grey {
+  background: #dddee3;
+}
+
+.header_no-color {
+  background: #fafafa;
+}
+
+.header__logo {
+  padding: 0;
+  margin: 8px 0;
+  width: 38px;
+  height: 38px;
+  background-image: url(../../images/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header__buttons {
+  margin: 0 0 3px 29px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__buttons-end {
+  justify-content: flex-end;
+}
+
+.header__link {
+  padding: 0;
+  margin: 0 0 0 16px;
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.header__link-active {
+  font-weight: 500;
+}
+
+.header__button-profile {
+  margin: 0;
+  padding: 6px 11px;
+  color: #000;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 50px;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.header__button-img {
+  padding: 0;
+  margin: 0 7px 0 0;
+  width: 12px;
+  height: 14px;
+  background-image: url(../../images/profile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header__burgerMenu {
+  background-image: url(../../images/icon-burger.svg);
+  background-color: transparent;
+  width: 44px;
+  height: 44px;
+  border: none;
+}
+
+.header__button-signIn {
+  padding: 8px 20px;
+  margin: 0 0 0 30px;
+  width: 76px;
+  height: 32px;
+  text-align: center;
+  color: #fafafa;
+  background: #3456f3;
+  text-decoration: none;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 3px;
+}
+
+.header__button-signUp {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+@media (max-width: 839px) {
+  .header {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 609px) {
+  .header {
+    padding: 10px 14px;
+  }
+
+  .header__button-signIn {
+    padding: 7px 12px;
+    margin: 0 0 0 14px;
+    width: 54px;
+    height: 26px;
+    font-size: 10px;
+  }
+
+  .header__button-signUp {
+    font-size: 10px;
+  }
+
+  .header__burgerMenu {
+    background-image: url(../../images/icon-burger-small.svg);
+    width: 40px;
+    height: 43px;
+    border: none;
+  }
+}
