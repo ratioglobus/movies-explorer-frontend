@@ -1,5 +1,6 @@
 import './AboutProject.css'
 
+
 export default function AboutProject () {
   return (
     <section className='aboutProject' id='aboutProject'>

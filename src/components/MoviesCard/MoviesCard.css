@@ -1,10 +1,21 @@
 .card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   width: 270px;
   height: 218px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0px 16px 24px 0px #0000000d;
   border-radius: 4%;
+}
+
+.card__link {
+  margin: 0;
+  padding: 0;
+  display: contents;
+  text-decoration: none;
 }
 
 .card__box {
@@ -29,7 +40,7 @@
 
 .card__name {
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 2px 0 10px 0;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 import { Link, useLocation } from 'react-router-dom'
-import { useAdjustSize } from '../../utils/useAdjustSize'
+import { useAdjustSize } from '../../hooks/useAdjustSize'
 import Navigation from '../Navigation/Navigation'
 
 
@@ -90,6 +90,7 @@ export default function Header ({ isLogged, mainPage }) {
           )}
         </div>
       </header>
+      
       <Navigation isOpened={isOpened} onClose={closeBurgerMenu} />
     </>
   )

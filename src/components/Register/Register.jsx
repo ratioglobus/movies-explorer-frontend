@@ -1,33 +1,34 @@
 import './Register.css'
 import AuthForm from '../AuthForm/AuthForm'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import AuthInput from '../AuthInput/AuthInput'
-import { Link } from 'react-router-dom'
+import Preloader from '../Preloader/Preloader'
+import { useFormWithValidation } from '../../hooks/useFormWithValidation'
 
 
-export default function Register () {
-  const { currentUser, isLoading, isLogged } = React.useContext(CurrentUserContext)
-    
-  const [nameInputRegisterInfo, setNameInputRegisterInfo] = React.useState('')
-  const [emailInputRegisterInfo, setEmailInputRegisterInfo] = React.useState('')
-  const [passwordInputRegisterInfo, setPasswordInputRegisterInfo] = React.useState('')
+export default function Register ({ onRegister }) {
+  const { isLoading, setApiMessage, apiMessage } = React.useContext(CurrentUserContext)
+  const { values, errors, isValid, handleChange } = useFormWithValidation()
 
-  function handleChangeNameRegisterInfo (event) {
-    setNameInputRegisterInfo(event.target.value)
+  function handleSubmit (event) {
+    event.preventDefault()
+
+    onRegister({
+      name: values.registerInputName,
+      email: values.registerInputEmail,
+      password: values.registerInputPassword
+    })
   }
 
-  function handleChangePasswordRegisterInfo (event) {
-    setPasswordInputRegisterInfo(event.target.value)
-  }
-
-  function handleChangeEmailRegisterInfo (event) {
-    setEmailInputRegisterInfo(event.target.value)
-  }
+  React.useEffect(() => {
+    setApiMessage('')
+  }, [])
 
   return (
     <main className='register'>
-      <Link to={'/'}>
+      <Link to={'/'} className='register__link-logo'>
         <div className='register__logo buttons-hover-state' />
       </Link>
 
@@ -37,34 +38,47 @@ export default function Register () {
         idForm='registerForm'
         classForm='register__form'
         buttonText='Зарегистрироваться'
-        onSubmit={() => {}}
+        onSubmit={handleSubmit}
+        isValid={isValid}
+        apiMessage={apiMessage}
       >
          <AuthInput
-          value={nameInputRegisterInfo}
-          onChange={handleChangeNameRegisterInfo}
+          value={values.registerInputName || ''}
+          onChange={handleChange}
           idInput='registerInputName'
           typeInput='text'
           labelText='Имя'
           minLength={2}
           maxLength={30}
           required
+          pattern='^[^\s][A-Za-zА-Яа-яЁё - \s]+$'
+          error={
+            errors.registerInputName === 'Введите данные в правильном формате.'
+              ? `Поле должно быть заполнено и может содержать только латиницу,
+                кириллицу, пробел или дефис`
+              : errors.registerInputName
+          }
         />
         <AuthInput
-          value={emailInputRegisterInfo}
-          onChange={handleChangeEmailRegisterInfo}
+          value={values.registerInputEmail || ''}
+          onChange={handleChange}
           idInput='registerInputEmail'
           labelText='E-mail'
           typeInput='email'
+          pattern='^[^\s][\w]+@[a-zA-Z]+\.[a-zA-Z]{2,30}$'
+          error={errors.registerInputEmail}
           required
         />
         <AuthInput
-          value={passwordInputRegisterInfo}
-          onChange={handleChangePasswordRegisterInfo}
+          value={values.registerInputPassword || ''}
+          onChange={handleChange}
           idInput='registerInputPassword'
           typeInput='password'
           labelText='Пароль'
-          minLength={4}
+          minLength={2}
           maxLength={16}
+          pattern='^[^\s]*$'
+          error={errors.registerInputPassword}
           required
  
         />
@@ -76,6 +90,8 @@ export default function Register () {
           Войти
         </Link>
       </div>
+
+      {isLoading && <Preloader />}
     </main>
   )
 }

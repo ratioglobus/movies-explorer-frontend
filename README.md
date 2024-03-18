@@ -1,26 +1,34 @@
-Выбранный макет в figma - [light-3](https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/Дипломный-проект?type=design&node-id=1-1534&mode=design&t=LJvwEg40bmGEnW2D-0)
+### Веб-приложение учебного проекта "Фильмы"
 
-Ссылка на проект: https://github.com/ratioglobus/movies-explorer-frontend/
+### Важные особенности проекта: 
 
-# Getting Started with Create React App
+Макет в figma - [light-3](https://www.figma.com/file/6FMWkB94wE7KTkcCgUXtnC/Дипломный-проект?type=design&node-id=1-1534&mode=design&t=LJvwEg40bmGEnW2D-0)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ссылка на репозиторий фронтенда: https://github.com/ratioglobus/movies-explorer-frontend/
+Ссылка на репозиторий бэкенда: https://github.com/ratioglobus/movies-explorer-api/
 
-## Available Scripts
+Визуальная фронтенд-часть добавлена на удаленный сервер и доступна по [ссылке](https://imovie.nomoredomainswork.ru/)
+Удаленный сервер бэкенда доступен по [ссылке](https://api.imovie.nomoredomainswork.ru/)
 
-In the project directory, you can run:
+IP 158.160.59.31
 
+## Информация о проекте
+Проект со следующим функционалом:
+
+- Регистрация/вход пользователей;
+- Редактирование профиля пользователя;
+- Просмотр списка всех доступных фильмов;
+- Поиск по фильмам;
+- Сохранение/удаление фильмов пользователя;
+
+
+
+### Установка и запуск проекта: 
+
+Проект работает на технологиии [Create React App](https://github.com/facebook/create-react-app).
+
+Установка зависимостей:
+### `npm install`
+
+Запуск проекта:
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-

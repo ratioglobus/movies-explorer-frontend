@@ -1,30 +1,35 @@
 import AuthForm from '../AuthForm/AuthForm'
 import './Login.css'
 import React from 'react'
-import { CurrentUserContext } from '../../contexts/CurrentUserContext';
-import AuthInput from '../AuthInput/AuthInput'
 import { Link } from 'react-router-dom'
+import { CurrentUserContext } from '../../contexts/CurrentUserContext'
+import { useFormWithValidation } from '../../hooks/useFormWithValidation'
+import AuthInput from '../AuthInput/AuthInput'
+import Preloader from '../Preloader/Preloader'
 
 
-export default function Login () {
-  const { currentUser, isLoading, isLogged } = React.useContext(CurrentUserContext)
+export default function Login ({ onLogin }) {
+  const { isLoading, setApiMessage, apiMessage } = React.useContext(CurrentUserContext)
+  const { values, errors, isValid, handleChange } = useFormWithValidation()
 
-  const [emailInputLoginInfo, setEmailInputLoginInfo] = React.useState('')
-  const [passwordInputLoginInfo, setPasswordInputLoginInfo] = React.useState('')
+  function handleSubmit (event) {
+    event.preventDefault()
 
-  function handleChangeEmailLoginInfo (event) {
-    setEmailInputLoginInfo(event.target.value)
+    onLogin({
+      email: values.loginInputEmail,
+      password: values.loginInputPassword
+    })
   }
 
-  function handleChangePasswordLoginInfo (event) {
-    setPasswordInputLoginInfo(event.target.value)
-  }
+  React.useEffect(() => {
+    setApiMessage('')
+  }, [])
 
   return (
     <main className='login'>
 
-      <Link to={'/'}>
-          <div className='login__logo buttons-hover-state' />
+      <Link to={'/'} className='login__link-logo'>
+      <div className='login__logo buttons-hover-state' />
       </Link>
 
       <h2 className='login__header'>Рады видеть!</h2>
@@ -33,24 +38,30 @@ export default function Login () {
         idForm='loginForm'
         classForm='login__form'
         buttonText='Войти'
-        onSubmit={() => {}}
+        onSubmit={handleSubmit}
+        isValid={isValid}
+        apiMessage={apiMessage}
       >
         <AuthInput
-          value={emailInputLoginInfo}
-          onChange={handleChangeEmailLoginInfo}
+          value={values.loginInputEmail || ''}
+          onChange={handleChange}
           idInput='loginInputEmail'
           labelText='E-mail'
           typeInput='email'
+          pattern='^[^\s]*$'
+          error={errors.loginInputEmail}
+          required
         />
         <AuthInput
-          value={passwordInputLoginInfo}
-          onChange={handleChangePasswordLoginInfo}
+          value={values.loginInputPassword || ''}
+          onChange={handleChange}
           idInput='loginInputPassword'
           typeInput='password'
           labelText='Пароль'
-        />
-        <AuthInput
-          className='authInput__input-palceholder'
+          required
+          minLength={2}
+          maxLength={16}
+          error={errors.loginInputPassword}
         />
       </AuthForm>
       <div className='login__info'>
@@ -60,6 +71,8 @@ export default function Login () {
           Регистрация
         </Link>
       </div>
+
+      {isLoading && <Preloader />}
     </main>
   )
 }

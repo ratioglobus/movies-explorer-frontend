@@ -1,6 +1,7 @@
 import './Navigation.css'
-import usePopupClose from '../../utils/usePopupClose.js'
+import usePopupClose from '../../hooks/usePopupClose.js'
 import { Link, useLocation } from 'react-router-dom'
+
 
 export default function BurgerMenu ({ isOpened, onClose }) {
   usePopupClose(isOpened, onClose)

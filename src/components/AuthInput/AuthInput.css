@@ -1,6 +1,6 @@
 .authInput {
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .authInput__text { 
@@ -12,36 +12,18 @@
 }
 
 .authInput__input {
-  padding: 0;
-  margin: 4px 0 30px;
+  padding: 4px 0 10px;
+  margin: 0 0 18px;
   width: 100%;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
-  outline-width: 1px;
-  border: none;
+  font-weight: 500;
   outline: none;
+  border: none;
   color: #000;
   background-color: transparent;
   border-bottom: 1px solid #e8e8e8;
-}
-
-.authInput__input-palceholder {
-  padding: 0;
-  margin: 4px 0 49px;
-  width: 100%;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  outline-width: 1px;
-  border: none;
-  outline: none;
-  color: #000;
-  background-color: transparent;
-  border-bottom: 0px;
-  pointer-events:none;
 }
 
 .authInput__input:focus {
@@ -55,8 +37,8 @@
   left: 0px;
   color: #ee3465;
   font-size: 10px;
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
   line-height: normal;
   position: absolute;
 }

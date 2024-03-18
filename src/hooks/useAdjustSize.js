@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+
 export const useAdjustSize = () => {
   const [width, setWidth] = useState(window.innerWidth)
 
@@ -15,6 +16,7 @@ export const useAdjustSize = () => {
   return {
     width,
     isScreen839: width >= 839,
-    isScreen989: width >= 989
+    isScreen989: width >= 989,
+    isScreen767: width <= 767
   }
 }

@@ -1,19 +1,16 @@
 import './AuthForm.css'
 
+
 export default function AuthForm ({
-  idForm,
-  classForm,
-  onSubmit,
   buttonText,
   children,
   isValid,
+  idForm,
+  classForm,
+  onSubmit,
   apiMessage
 }) {
-  function handleSubmit (event) {
-    event.preventDefault()
-    onSubmit()
-  }
-
+  
   return (
     <form
       action='#'
@@ -22,22 +19,21 @@ export default function AuthForm ({
       noValidate
       name={idForm}
       className={`${classForm} authForm`}
-      onSubmit={handleSubmit}
+      onSubmit={onSubmit}
     >
       {children}
       
       <div className='authForm__box'>
-        <span className='authForm__apiMessage'>{apiMessage}</span>
-
+      <span className='authForm__apiMessage'>{apiMessage}</span>
         <button
           className={`authForm__btn ${
             isValid ? 'buttons-hover-state' : 'authForm__btn-disabled'
           }`}
-          disabled={!isValid}
           type='submit'
           form={idForm}
+          disabled={!isValid}
         >
-        {buttonText}
+          {buttonText}
         </button>
       </div>
     </form>

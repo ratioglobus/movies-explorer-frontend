@@ -1,7 +1,6 @@
 .promo {
   margin: 0;
   padding: 184px 0px 224px;
-  /* padding: 150px 0px 140px; */
   background-color: #dddee3;
   background-image: url(../../images/landing-logo.svg);
   background-repeat: no-repeat;
@@ -28,7 +27,7 @@
   }
 }
 
-@media (max-width: 739px) {
+@media (max-width: 747px) {
   .promo__title {
     width: 95%;
   }

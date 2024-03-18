@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.login__link-logo {
+  width: fit-content;
+}
+
 .login__logo {
   margin: 0;
   padding: 0;

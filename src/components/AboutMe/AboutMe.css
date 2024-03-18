@@ -133,3 +133,9 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 326px) {
+  .aboutMe__photo {
+    width: 285px;
+  }
+}

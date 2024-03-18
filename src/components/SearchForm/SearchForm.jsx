@@ -2,15 +2,18 @@ import React from 'react'
 import './SearchForm.css'
 import Checkbox from '../Checkbox/Checkbox'
 
-export default function SearchForm () {
-  const [movieName, setMovieName] = React.useState('')
 
-  function handleChangeMovieName (event) {
-    setMovieName(event.target.value)
-  }
+export default function SearchForm ({
+    searchQuery,
+    handleChangeSearchQuery,
+    checkedFilter,
+    handleChangeCheckedFilter,
+    onSubmit
+  }) {
 
   function handleSubmit (event) {
     event.preventDefault()
+    onSubmit()
   }
 
   return (
@@ -26,13 +29,14 @@ export default function SearchForm () {
         <div className='searchForm__box'>
           <input
             type='text'
+            required
             id='searchForm__box'
             name='searchForm__box'
             className='searchForm__input'
             placeholder='Фильм'
             autoComplete='off'
-            value={movieName}
-            onChange={handleChangeMovieName}
+            value={searchQuery}
+            onChange={handleChangeSearchQuery}
           />
           
           <button
@@ -43,8 +47,12 @@ export default function SearchForm () {
         </div>
         
         <div className='searchForm__filter'>
-          <Checkbox />
-          <span className='searchForm__filter-text'>Короткометражки</span>
+          <Checkbox
+            checked={checkedFilter}
+            handleChange={handleChangeCheckedFilter}
+        />
+
+        <span className='searchForm__filter-text'>Короткометражки</span>
         </div>
       </form>
     </section>

@@ -14,7 +14,7 @@ import Preloader from '../Preloader/Preloader'
 
 export default function Main () {
 
-  const { currentUser, isLoading, isLogged } =
+  const { isLoading, isLogged } =
   React.useContext(CurrentUserContext)
 
   return (

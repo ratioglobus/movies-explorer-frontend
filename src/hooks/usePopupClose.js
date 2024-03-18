@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+
 export default function usePopupClose (isOpen, closePopup) {
   useEffect(() => {
     if (!isOpen) return
@@ -16,12 +17,12 @@ export default function usePopupClose (isOpen, closePopup) {
       }
     }
 
-    document.addEventListener('keydown', handleEscape)
     document.addEventListener('mousedown', handleOverlay)
+    document.addEventListener('keydown', handleEscape)
 
     return () => {
-      document.removeEventListener('keydown', handleEscape)
       document.removeEventListener('mousedown', handleOverlay)
+      document.removeEventListener('keydown', handleEscape)
     }
   }, [isOpen, closePopup])
 }
